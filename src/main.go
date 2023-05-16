@@ -8,37 +8,13 @@ import (
 
 func main() {
 	// Initialize categories with items
-	groceries := model.Category{
-		Name: "Groceries",
-		Items: []model.Item{
-			{Name: "bread"},
-			{Name: "milk"},
-			{Name: "eggs"},
-			{Name: "butter"},
-		},
-	}
-	fruits := model.Category{
-		Name: "Fruits",
-		Items: []model.Item{
-			{Name: "Apple"},
-			{Name: "Orange"},
-			{Name: "Banana"},
-		},
-	}
+	groceries := model.NewCategory("Groceries", "Bread", "Milk", "Eggs", "Butter")
 
-	bakery := model.Category{
-		Name: "Bakery",
-		Items: []model.Item{
-			{Name: "Bread"},
-		},
-	}
+	fruits := model.NewCategory("Fruits", "Apple", "Orange", "Banana")
 
-	dairy := model.Category{
-		Name: "Dairy",
-		Items: []model.Item{
-			{Name: "Milk"},
-		},
-	}
+	bakery := model.NewCategory("Bakery", "Bread")
+
+	dairy := model.NewCategory("Dairy", "Milk")
 
 	// Create a shopping list with the categories.
 	shoppingList := model.ShoppingList{
