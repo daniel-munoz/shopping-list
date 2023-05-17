@@ -5,3 +5,6 @@ shopping-list: $(shell find src -name '*.go')
 
 clean:
 	rm shopping-list
+
+run: shopping-list
+	./shopping-list
