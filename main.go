@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/daniel-munoz/shopping-list/src/model"
+	"github.com/daniel-munoz/shopping-list/model"
 )
 
 func main() {
@@ -27,7 +27,6 @@ func main() {
 	bakery.GetItem("Bread").MarkAsBought()
 	bakery.GetItem("Donut").MarkAsBought()
 	dairy.GetItem("Milk").MarkAsBought()
-
 
 	// Create a shopping list with the categories.
 	shoppingList := model.ShoppingList{
